@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="text_color">#FFFFFF</color>
+    <color name="text_color_gray">#80FFFFFF</color>
+    <color name="error_color">#F4606C</color>
+    <color name="bg_error">#33F4606C</color>
+    <color name="close_tv">#F14537</color>
+    <color name="main_bg_color">#1E1E1E</color>
+    <color name="btn_bg_color">#363636</color>
+    <color name="btn_press_bg_color">#e0484848</color>
+    <color name="round_menu_outer_color">#e06E4C89</color>
+    <color name="round_menu_outer_color_light">#FF6E4C89</color>
+    <color name="round_menu_inner_color">#e0386093</color>
+    <color name="round_menu_inner_color_light">#FF386093</color>
+    <color name="green">#63e2b7</color>
+    <color name="bg_green">#3363e2b7</color>
+    <color name="line_color">#B3ffffff</color>
+    <color name="border_line_color">#ffffff</color>
+    <color name="connect_item_icon_active">#1EAA63</color>
+    <color name="layout_checked_border4_color">#409EFF</color>
+    <color name="layout_btn_bg_color">#282828</color>
+    <color name="switch_color">#A0EEE1</color>
+    <color name="switch_color_bg">#80A0EEE1</color>
+</resources>

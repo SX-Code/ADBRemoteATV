@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_custom_dialog"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_add_new_app"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/text_color"
+        android:textSize="18sp" />
+
+    <com.swx.adbcontrol.components.NewTextInputLayout
+        android:id="@+id/input_layout_et_app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/errorTextAppearance"
+        app:hintTextAppearance="@style/hintAppearance">
+
+        <EditText
+            android:id="@+id/et_app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_input"
+            android:ems="10"
+            android:hint="@string/text_name"
+            android:inputType="text"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/line_color"
+            android:textSize="14sp" />
+    </com.swx.adbcontrol.components.NewTextInputLayout>
+
+    <com.swx.adbcontrol.components.NewTextInputLayout
+        android:id="@+id/input_layout_et_icon_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/errorTextAppearance"
+        app:hintTextAppearance="@style/hintAppearance">
+
+        <EditText
+            android:id="@+id/et_icon_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:background="@drawable/background_input"
+            android:ems="10"
+            android:focusableInTouchMode="true"
+            android:hint="@string/text_icon_url"
+            android:inputType="text"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/line_color"
+            android:textSize="14sp" />
+    </com.swx.adbcontrol.components.NewTextInputLayout>
+
+    <com.swx.adbcontrol.components.NewTextInputLayout
+        android:id="@+id/input_layout_et_start_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/errorTextAppearance"
+        app:hintTextAppearance="@style/hintAppearance">
+
+        <EditText
+            android:id="@+id/et_start_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_input"
+            android:ems="10"
+            android:hint="@string/text_star_url"
+            android:inputType="text"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/line_color"
+            android:textSize="14sp" />
+    </com.swx.adbcontrol.components.NewTextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_app_negative"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@drawable/background_btn_tr"
+            android:padding="6dp"
+            android:text="@string/text_cancel"
+            android:textColor="@color/green" />
+
+        <Button
+            android:id="@+id/btn_app_positive"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/background_btn_tr"
+            android:padding="6dp"
+            android:text="@string/text_ok"
+            android:textColor="@color/green" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IndicatorView">
+        <!--指示器选中颜色-->
+        <attr name="colorSelected" format="color|reference"/>
+        <!--指示器未选中颜色-->
+        <attr name="colorUnSelected" format="color|reference"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/btn_press_bg_color" />
+            <corners android:radius="360dip" />
+            <padding android:bottom="12dp" android:left="12dp" android:right="12dp" android:top="12dp" />
+        </shape>
+    </item>
+</selector>

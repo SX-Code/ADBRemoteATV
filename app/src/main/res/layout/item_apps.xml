@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="70dp"
+       android:layout_height="70dp"
+       android:layout_marginStart="10dp"
+       android:layout_marginEnd="10dp"
+       app:cardPreventCornerOverlap="false"
+       android:background="@drawable/background_apps_icon"
+       app:cardCornerRadius="8dp">
+
+       <ImageView
+           android:id="@+id/iv_quick_access_app_icon"
+           android:layout_width="70dp"
+           android:layout_height="70dp"
+           android:scaleType="fitCenter"
+           android:background="@drawable/background_apps_icon"
+           android:adjustViewBounds="true"
+           android:contentDescription="@string/text_quick_access"/>
+
+   </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/iv_quick_access_app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:scrollHorizontally="true"
+        android:singleLine="true" />
+
+</LinearLayout>

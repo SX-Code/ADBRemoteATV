@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.RoundMenuFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutNav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.dlong.rep.dlroundmenuview.DLRoundMenuView
+            android:id="@+id/dl_rmv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:RMCoreMenuNormalBackgroundColor="@color/btn_bg_color"
+            app:RMCoreMenuRoundRadius="50dp"
+            app:RMCoreMenuSelectedBackgroundColor="@color/btn_press_bg_color"
+            app:RMCoreMenuStrokeColor="@color/round_menu_inner_color"
+            app:RMCoreMenuStrokeSize="3dp"
+            app:RMRoundMenuDrawable="@mipmap/arrow_right"
+            app:RMRoundMenuNormalBackgroundColor="@color/btn_bg_color"
+            app:RMRoundMenuSelectedBackgroundColor="@color/btn_press_bg_color"
+            app:RMRoundMenuStrokeColor="@color/round_menu_outer_color"
+            app:RMRoundMenuStrokeSize="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

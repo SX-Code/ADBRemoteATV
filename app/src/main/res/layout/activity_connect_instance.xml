@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_connect_instance"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ConnectInstanceActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back_to"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/background_btn_circle_tr_ps"
+            android:contentDescription="@string/text_return"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_arrow_left"
+            app:tint="@color/text_color" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/text_select_connect"
+            android:textColor="@color/text_color"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_connect"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:background="@color/btn_bg_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/main_bg_color"
+        android:gravity="center_vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layout_bottom_tools"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_trash"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/background_btn_circle_tr"
+                android:contentDescription="@string/ic_delete"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_trash"
+                app:tint="@color/text_color" />
+
+            <ImageButton
+                android:id="@+id/btn_edit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/background_btn_circle_tr"
+                android:contentDescription="@string/ic_edit"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_pen"
+                app:tint="@color/text_color" />
+
+            <ImageButton
+                android:id="@+id/btn_more"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/background_btn_circle_tr"
+                android:contentDescription="@string/ic_more"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ic_ellipsis_vertical"
+                app:tint="@color/text_color" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_new_connect"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/background_btn_r16_ps"
+            android:contentDescription="@string/text_add"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_plus" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

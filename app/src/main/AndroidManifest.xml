@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application xmlns:tool="http://schemas.android.com/tools"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".MainApplication"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ADBTVRemoteControl"
+        tool:ignore="LockedOrientationActivity">
+        <activity
+            android:name=".activity.settings.SettingOnlineAppsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.settings.SettingLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.settings.SettingApplicationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.settings.SettingBehaviorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ConnectInstanceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
