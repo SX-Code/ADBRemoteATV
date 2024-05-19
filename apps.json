@@ -1,23 +1,23 @@
 [
     {
         "name": "TVBox",
-        "icon": "https://gtihub.com/SX-Code/ADBRemoteATV/raw/master/icons/tvbox.png",
+        "icon": "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/icons/tvbox.png",
         "url": "com.github.tvbox.osc/.ui.activity.HomeActivity"
     },
     {
         "name": "TVBox UI美化版",
-        "icon": "https://gtihub.com/SX-Code/ADBRemoteATV/raw/master/icons/tvbox.png",
+        "icon": "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/icons/tvbox.png",
         "url": "com.github.tvbox.osc.tk/com.github.tvbox.osc.ui.activity.HomeActivity"
     },
     {
         "name": "BBLL",
-        "icon": "https://gtihub.com/SX-Code/ADBRemoteATV/raw/master/icons/bbll.png",
+        "icon": "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/icons/bbll.png",
         "url": "com.xx.blbl/com.xx.blbl.ui.MainActivity"
     },
     
     {
         "name": "ACAC",
-        "icon": "https://gtihub.com/SX-Code/ADBRemoteATV/raw/master/icons/acac.png",
+        "icon": "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/icons/acac.png",
         "url": "com.xx.afaf/com.xx.afaf.MainActivity"
     }
 ]
