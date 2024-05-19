@@ -1,0 +1,23 @@
+[
+    {
+        "name": "TVBox",
+        "icon": "https://gitee.com/SX-Code/adbremote-control/raw/master/icons/tvbox.png",
+        "url": "com.github.tvbox.osc/.ui.activity.HomeActivity"
+    },
+    {
+        "name": "TVBox UI美化版",
+        "icon": "https://gitee.com/SX-Code/adbremote-control/raw/master/icons/tvbox.png",
+        "url": "com.github.tvbox.osc.tk/com.github.tvbox.osc.ui.activity.HomeActivity"
+    },
+    {
+        "name": "BBLL",
+        "icon": "https://gitee.com/SX-Code/adbremote-control/raw/master/icons/bbll.png",
+        "url": "com.xx.blbl/com.xx.blbl.ui.MainActivity"
+    },
+    
+    {
+        "name": "ACAC",
+        "icon": "https://gitee.com/SX-Code/adbremote-control/raw/master/icons/acac.png",
+        "url": "com.xx.afaf/com.xx.afaf.MainActivity"
+    }
+]
