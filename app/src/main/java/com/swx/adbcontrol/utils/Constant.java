@@ -13,7 +13,7 @@ public class Constant {
     public static final String KEY_QUICK_ACCESS_ORDER_CHANGE = "key_quick_access_order_change";
     public static final String KEY_QUICK_ACCESS_APP_ONLINE_URL = "key_quick_access_app_online_url";
     public static final String VALUE_ACTIVITY_APP_PRIORITY = "value_activity_app_priority";
-    public static final String URL_PREFIX_ZH = "https://gitee.com/SX-Code/adbremote-atv/raw/master/"; // Gitee文件地址前缀
+    public static final String URL_PREFIX_ZH = "https://gitee.com/SX-Code/ADBRemoteATV/raw/master/"; // Gitee文件地址前缀
     public static final String URL_PREFIX_EN = "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/"; // Github文件地址前缀
 
     public static final String URL_PREFIX_DOWNLOAD_EN = "https://github.com/SX-Code/ADBRemoteATV/releases/download/"; // Github下载地址
