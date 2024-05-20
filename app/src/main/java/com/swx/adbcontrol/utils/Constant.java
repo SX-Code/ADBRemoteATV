@@ -19,7 +19,7 @@ public class Constant {
     public static final String URL_PREFIX_DOWNLOAD_EN = "https://github.com/SX-Code/ADBRemoteATV/releases/download/"; // Github下载地址
     public static final String URL_PREFIX_DOWNLOAD_ZH = "https://gitee.com/SX-Code/ADBRemoteATV/releases/download/"; // Gitee 下载地址
     public static final String FILE_SUFFIX_DOWNLOAD_GET = "update.json"; // 下载信息文件名
-    public static String URL_DOWNLOAD_GET = URL_PREFIX_DOWNLOAD_ZH + FILE_SUFFIX_DOWNLOAD_GET; // 获取下载地址
+    public static String URL_DOWNLOAD_GET = URL_PREFIX_ZH + FILE_SUFFIX_DOWNLOAD_GET; // 获取下载地址
     public static final String FILE_SUFFIX_APPS = "apps.json"; // APPS仓库文件名
     public static String DEFAULT_QUICK_ACCESS_APP_ONLINE_URL = URL_PREFIX_ZH + FILE_SUFFIX_APPS; // APPS仓库地址
     public static final String SAVE_FILE_NAME = "ADB_Remote_ATV_%s.apk";
@@ -32,7 +32,7 @@ public class Constant {
         if (!language.equals("zh")) {
             // 使用Github
             DEFAULT_QUICK_ACCESS_APP_ONLINE_URL = URL_PREFIX_ZH + FILE_SUFFIX_APPS;
-            URL_DOWNLOAD_GET = URL_PREFIX_DOWNLOAD_EN + FILE_SUFFIX_DOWNLOAD_GET;
+            URL_DOWNLOAD_GET = URL_PREFIX_EN + FILE_SUFFIX_DOWNLOAD_GET;
         }
     }
 }
