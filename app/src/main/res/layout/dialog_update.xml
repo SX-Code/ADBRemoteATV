@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_custom_dialog"
     android:orientation="vertical"
     android:padding="24dp">
@@ -14,12 +15,24 @@
         android:textColor="@color/text_color"
         android:textSize="16sp" />
 
-    <ProgressBar
+    <TextView
+        android:id="@+id/tv_update_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:textColor="@color/text_color"
+        android:textSize="14sp"
+        />
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
         android:id="@+id/progress_bar_update"
         style="?android:progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        custom:progress_reached_color="@color/green"
+        custom:progress_text_color="@color/green"
         android:textColor="@color/text_color"
         android:textSize="14sp" />
 

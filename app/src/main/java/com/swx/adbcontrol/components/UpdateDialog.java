@@ -6,26 +6,27 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.daimajia.numberprogressbar.NumberProgressBar;
+import com.daimajia.numberprogressbar.OnProgressBarListener;
 import com.swx.adbcontrol.R;
 
 /**
  * @Author sxcode
  * @Date 2024/5/16 17:47
  */
-public class UpdateDialog extends Dialog {
+public class UpdateDialog extends Dialog implements OnProgressBarListener {
     private Button negativeBtn;
-    private ProgressBar updateProgress;
+    private TextView tvUpdateInfo;
+    private NumberProgressBar updateProgress;
     private OnButtonClickListener listener;
 
     public UpdateDialog(@NonNull Context context) {
@@ -66,6 +67,7 @@ public class UpdateDialog extends Dialog {
     private void initView() {
         negativeBtn = findViewById(R.id.btn_update_negative);
         updateProgress = findViewById(R.id.progress_bar_update);
+        tvUpdateInfo = findViewById(R.id.tv_update_info);
     }
 
     private void initEvent() {
@@ -74,10 +76,23 @@ public class UpdateDialog extends Dialog {
         });
     }
 
-    public UpdateDialog setProgress(int progress) {
+    public void setProgress(int progress) {
         this.updateProgress.setProgress(progress);
-        return this;
     }
+
+    public void setUpdateInfo(String info) {
+        if (info.isEmpty()) return;
+        tvUpdateInfo.setText(info);
+        tvUpdateInfo.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void onProgressChange(int current, int max) {
+        if (current == max) {
+            updateProgress.setProgress(0);
+        }
+    }
+
 
     public UpdateDialog setOnButtonClickListener(OnButtonClickListener listener) {
         this.listener = listener;

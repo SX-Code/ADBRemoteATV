@@ -127,7 +127,10 @@ public class AutoUpdater {
             String[] split = apkName.replace(".apk", "").split("_");
             versionName = split[split.length - 1];
             if (Long.parseLong(localVersion) >= Long.parseLong(versionName)) {
-                mHandler.sendEmptyMessage(SHOWDOWN);
+                Message message = new Message();
+                message.what = SHOWDOWN;
+                message.obj = updateInfo.getInfo();
+                mHandler.sendMessage(message);
             } else {
                 mHandler.sendEmptyMessage(NO_NEED);
             }
@@ -292,7 +295,7 @@ public class AutoUpdater {
                     ToastUtil.showShort(mContext.getString(R.string.text_no_need_update));
                     break;
                 case SHOWDOWN:
-                    showUpdateDialog();
+                    showUpdateDialog((String) msg.obj);
                     break;
                 case DOWN_UPDATE:
                     updateDialog.setProgress(msg.arg1);
@@ -317,7 +320,7 @@ public class AutoUpdater {
     };
 
 
-    private void showUpdateDialog() {
+    private void showUpdateDialog(String info) {
         if (updateDialog == null) {
             updateDialog = new UpdateDialog(mContext);
             updateDialog.setOnButtonClickListener(new UpdateDialog.OnButtonClickListener() {
@@ -330,6 +333,7 @@ public class AutoUpdater {
             });
         }
         updateDialog.show();
+        updateDialog.setUpdateInfo(info);
         downloadApk();
     }
 
