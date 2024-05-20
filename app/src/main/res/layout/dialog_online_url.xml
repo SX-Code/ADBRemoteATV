@@ -20,6 +20,7 @@
         android:id="@+id/input_layout_online_url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/text_color"
         app:errorEnabled="true"
         app:errorTextAppearance="@style/errorTextAppearance"
         app:hintTextAppearance="@style/hintAppearance">

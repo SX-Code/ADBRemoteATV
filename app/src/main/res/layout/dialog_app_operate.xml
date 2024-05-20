@@ -16,11 +16,13 @@
         android:textColor="@color/text_color"
         android:textSize="18sp" />
 
-    <com.swx.adbcontrol.components.NewTextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/input_layout_et_app_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:errorEnabled="true"
+        app:counterOverflowTextColor="@color/white"
+        android:textColorHint="@color/text_color"
         app:errorTextAppearance="@style/errorTextAppearance"
         app:hintTextAppearance="@style/hintAppearance">
 
@@ -33,16 +35,17 @@
             android:ems="10"
             android:hint="@string/text_name"
             android:inputType="text"
-            android:textColor="@color/text_color"
+            android:textColor="@color/white"
             android:textColorHint="@color/line_color"
             android:textSize="14sp" />
-    </com.swx.adbcontrol.components.NewTextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.swx.adbcontrol.components.NewTextInputLayout
         android:id="@+id/input_layout_et_icon_path"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:errorEnabled="true"
+        android:textColorHint="@color/text_color"
         app:errorTextAppearance="@style/errorTextAppearance"
         app:hintTextAppearance="@style/hintAppearance">
 
@@ -66,6 +69,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:errorEnabled="true"
+        android:textColorHint="@color/text_color"
+        app:helperTextTextColor="@color/text_color"
         app:errorTextAppearance="@style/errorTextAppearance"
         app:hintTextAppearance="@style/hintAppearance">
 

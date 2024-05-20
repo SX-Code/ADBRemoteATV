@@ -12,17 +12,18 @@ import com.swx.adbcontrol.R;
 public class ShareUtil {
 
     public static void shareApk(Activity activity) {
-        AutoUpdater.getLatestApkUrl(new HttpUtil.HttpCallback() {
-            @Override
-            public void success(String content) {
-                shareText(activity, "", content);
-            }
-
-            @Override
-            public void fail(String msg) {
-                ToastUtil.showToastThread("分享功能暂时无法使用");
-            }
-        });
+//        AutoUpdater.getLatestApkUrl(new HttpUtil.HttpCallback() {
+//            @Override
+//            public void success(String content) {
+//                shareText(activity, "", content);
+//            }
+//
+//            @Override
+//            public void fail(String msg) {
+//                ToastUtil.showToastThread("分享功能暂时无法使用");
+//            }
+//        });
+        shareText(activity, "", "[ADB Remote ATV](https://github.com/SX-Code/ADBRemoteATV/releases/download/v0.0.0/ADB_Remote_ATV_20240518175820.apk)");
     }
 
     public static void shareText(Activity activity, String title, String text) {

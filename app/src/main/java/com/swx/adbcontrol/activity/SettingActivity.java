@@ -26,6 +26,8 @@ import com.swx.adbcontrol.activity.settings.SettingBehaviorActivity;
 import com.swx.adbcontrol.activity.settings.SettingLayoutActivity;
 import com.swx.adbcontrol.components.QuestionDialog;
 import com.swx.adbcontrol.utils.AutoUpdater;
+import com.swx.adbcontrol.utils.Constant;
+import com.swx.adbcontrol.utils.Permission;
 import com.swx.adbcontrol.utils.ShareUtil;
 import com.swx.adbcontrol.utils.ToastUtil;
 
@@ -37,7 +39,6 @@ import java.util.ArrayList;
  */
 public class SettingActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public static final int REQUEST_CODE = 100;
     public QuestionDialog permissionDialog;
 
     @Override
@@ -59,6 +60,8 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
         findViewById(R.id.layout_setting_mgr_apps).setOnClickListener(this);
         findViewById(R.id.layout_setting_share).setOnClickListener(this);
         findViewById(R.id.layout_setting_update).setOnClickListener(this);
+        findViewById(R.id.layout_setting_fallback).setOnClickListener(this);
+        findViewById(R.id.layout_setting_github).setOnClickListener(this);
     }
 
 
@@ -80,38 +83,27 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
             ShareUtil.shareApk(this);
         } else if (id == R.id.layout_setting_update) {
             updateApp();
+        } else if (id == R.id.layout_setting_fallback) {
+            openUrl(Constant.URL_GITHUB_FEEDBACK_PAGE);
+        } else if (id == R.id.layout_setting_github) {
+            openUrl(Constant.URL_GITHUB_CODE_PAGE);
         }
     }
 
-    private void openGithubCode() {
-
+    private void openUrl(String url) {
+        Uri uri = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 
     private void updateApp() {
         try {
-            //6.0才用动态权限
-            if (Build.VERSION.SDK_INT >= 23) {
-                String[] permissions = {
-                        Manifest.permission.READ_EXTERNAL_STORAGE,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                        Manifest.permission.ACCESS_WIFI_STATE,
-                        Manifest.permission.INTERNET
-                };
-                ArrayList<String> permissionList = new ArrayList<>();
-                for (String permission : permissions) {
-                    if (ActivityCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
-                        permissionList.add(permission);
-                    }
-                }
-                if (permissionList.isEmpty()) {
-                    //说明权限都已经通过，可以更新
-                    //自动更新
-                    AutoUpdater manager = new AutoUpdater(SettingActivity.this);
-                    manager.checkUpdate();
-                } else {
-                    ActivityCompat.requestPermissions(this, permissions, REQUEST_CODE);
-                }
-            }
+            Permission permission = new Permission();
+            permission.checkPermissions(this, () -> {
+                // 说明权限都已经通过，可以更新, 自动更新
+                AutoUpdater manager = new AutoUpdater(SettingActivity.this);
+                manager.checkUpdate();
+            });
         } catch (Exception e) {
             ToastUtil.showShort("更新失败");
         }
@@ -121,10 +113,11 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         boolean hasPermission = false;
-        if (REQUEST_CODE == requestCode) {
-            for (int i = 0; i < grantResults.length; i++) {
-                if (grantResults[i] == -1) {
+        if (Permission.REQUEST_CODE == requestCode) {
+            for (int grantResult : grantResults) {
+                if (grantResult == -1) {
                     hasPermission = true;
+                    break;
                 }
             }
             if (hasPermission) {

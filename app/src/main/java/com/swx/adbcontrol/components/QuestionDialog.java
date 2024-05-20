@@ -67,7 +67,6 @@ public class QuestionDialog extends Dialog {
         if (window != null) {
             window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             window.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
-            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
             int widthPixels = Resources.getSystem().getDisplayMetrics().widthPixels;
             WindowManager.LayoutParams params = getWindow().getAttributes();
             params.width = widthPixels - 200;

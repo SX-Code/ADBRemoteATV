@@ -3,8 +3,10 @@ package com.swx.adbcontrol.utils;
 import android.util.Log;
 
 import com.swx.adbcontrol.entity.AppItem;
+import com.swx.adbcontrol.entity.UpdateInfo;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -36,6 +38,17 @@ public class BeanUtil {
             Log.e(TAG, "getAppsByJsonArray: e", e);
         }
         return apps;
+    }
+
+    public static UpdateInfo getUpdateInfoByJsonArray(String jsonString) {
+        if (jsonString.isEmpty()) return null;
+        try {
+            JSONObject jsonObject = new JSONObject(jsonString);
+            return new UpdateInfo((String) jsonObject.get("info"), (String) jsonObject.get("url"));
+        } catch (JSONException e) {
+            Log.e(TAG, "getUpdateInfoByJsonArray: e", e);
+        }
+        return null;
     }
 
     /**

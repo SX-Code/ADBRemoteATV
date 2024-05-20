@@ -20,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:errorEnabled="true"
+        android:textColorHint="@color/text_color"
         app:errorTextAppearance="@style/errorTextAppearance"
         app:hintTextAppearance="@style/hintAppearance">
 
@@ -42,6 +43,7 @@
         android:layout_height="wrap_content"
         app:boxBackgroundMode="none"
         app:errorEnabled="true"
+        android:textColorHint="@color/text_color"
         app:errorTextAppearance="@style/errorTextAppearance"
         app:hintTextAppearance="@style/hintAppearance">
 
@@ -65,6 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:errorEnabled="true"
+        android:textColorHint="@color/text_color"
         app:errorTextAppearance="@style/errorTextAppearance"
         app:hintTextAppearance="@style/hintAppearance">
 

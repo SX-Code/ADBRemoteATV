@@ -40,6 +40,7 @@
         <item name="colorControlNormal">@color/line_color</item>
         <item name="colorControlActivated">@color/green</item>
         <item name="android:textColor">@color/green</item>
+        <item name="android:textColorHint">@color/text_color</item>
     </style>
 
     <style name="errorTextAppearance">

@@ -86,4 +86,6 @@
     <string name="text_url_error">配置地址格式错误</string>
     <string name="share_app_to">分享到</string>
     <string name="text_update">更新</string>
+    <string name="text_no_need_update">无需更新</string>
+    <string name="text_update_app">更新软件</string>
 </resources>
