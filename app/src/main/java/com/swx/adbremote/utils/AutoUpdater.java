@@ -121,7 +121,7 @@ public class AutoUpdater {
             String apkName = config.substring(config.lastIndexOf('/') + 1);
             String[] split = apkName.replace(".apk", "").split("_");
             versionName = split[split.length - 1];
-            if (Long.parseLong(localVersion) >= Long.parseLong(versionName)) {
+            if (Long.parseLong(localVersion) < Long.parseLong(versionName)) {
                 Message message = new Message();
                 message.what = SHOWDOWN;
                 message.obj = updateInfo.getInfo();
