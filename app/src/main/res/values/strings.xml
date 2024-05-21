@@ -88,4 +88,13 @@
     <string name="text_update">更新</string>
     <string name="text_no_need_update">无需更新</string>
     <string name="text_update_app">更新软件</string>
+    <string name="text_close">关闭</string>
+    <string name="text_make_sure_focus_input">请确保 Android TV 键盘已打开</string>
+    <string name="text_start_input">开始打字…</string>
+    <string name="text_confirm">确认</string>
+    <string name="text_input_chinese">输入中文</string>
+    <string name="text_input_chinese_tip">中文输入需要 ADBKeyboard 的支持，请确保 Android TV 上已经安装 ADBKeyboard。点击“下载”按钮在 Android TV 上打开下载网址</string>
+    <string name="text_download">下载</string>
+    <string name="text_input_chinese_unless">无法输入中文?</string>
+    <string name="text_backspace">退格</string>
 </resources>

@@ -16,7 +16,7 @@
         android:textColor="@color/text_color"
         android:textSize="16sp" />
 
-    <com.swx.adbcontrol.components.NewTextInputLayout
+    <com.swx.adbremote.components.NewTextInputLayout
         android:id="@+id/input_layout_online_url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:textColorHint="@color/line_color"
             android:textSize="14sp"
             tools:ignore="ContentDescription" />
-    </com.swx.adbcontrol.components.NewTextInputLayout>
+    </com.swx.adbremote.components.NewTextInputLayout>
 
 
     <LinearLayout

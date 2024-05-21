@@ -174,11 +174,10 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/layout_quick_access_app"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="100dp"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginTop="10dp">
 
 
         </androidx.recyclerview.widget.RecyclerView>
@@ -198,7 +197,7 @@
             android:layout_weight="1"
             android:padding="15dp" />
 
-        <com.swx.adbcontrol.components.IndicatorView
+        <com.swx.adbremote.components.IndicatorView
             android:id="@+id/indicator"
             android:layout_width="match_parent"
             android:layout_height="6dp" />
@@ -283,7 +282,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/buttonKeyboard"
+                        android:id="@+id/btn_text_input"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:background="@drawable/background_btn_circle_pm"

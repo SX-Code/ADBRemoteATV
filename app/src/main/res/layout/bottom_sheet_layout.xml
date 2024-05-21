@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_color"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <ToggleButton
+            android:id="@+id/tb_switch_language"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/background_btn_apps_online_url"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_input_chinese_unless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/background_text_underline"
+            android:text="@string/text_input_chinese_unless"
+            android:textColor="@color/error_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tb_switch_language"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/btn_close_bottom_dialog"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:background="@drawable/background_btn_tr"
+            android:contentDescription="@string/text_close"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_x"
+            app:tint="@color/text_color" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_about"
+            app:tint="@color/text_color_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/text_make_sure_focus_input"
+            android:textColor="@color/text_color_gray" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/et_input_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:background="@color/main_bg_color"
+        android:enabled="true"
+        android:gravity="top"
+        android:hint="@string/text_start_input"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:minLines="8"
+        android:padding="5dp"
+        android:scrollbars="vertical"
+        android:textColor="@color/text_color"
+        android:textColorHint="@color/text_color_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_confirm_input"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_btn_apps_online_url"
+            android:text="@string/text_confirm"
+            android:textColor="@color/text_color"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/btn_input_backspace"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/background_btn_apps_online_url"
+            android:padding="10dp"
+            android:contentDescription="@string/text_backspace"
+            android:scaleType="fitCenter"
+            android:textColor="@color/text_color"
+            app:srcCompat="@drawable/ic_backspace"
+            app:tint="@color/text_color" />
+
+        <ImageButton
+            android:id="@+id/btn_input_enter"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/text_enter"
+            android:background="@drawable/background_btn_apps_online_url"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_enter"
+            app:tint="@color/text_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

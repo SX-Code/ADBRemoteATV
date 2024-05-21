@@ -40,7 +40,7 @@
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.swx.adbcontrol.components.NewTextInputLayout
+    <com.swx.adbremote.components.NewTextInputLayout
         android:id="@+id/input_layout_et_icon_path"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,9 +62,9 @@
             android:textColor="@color/text_color"
             android:textColorHint="@color/line_color"
             android:textSize="14sp" />
-    </com.swx.adbcontrol.components.NewTextInputLayout>
+    </com.swx.adbremote.components.NewTextInputLayout>
 
-    <com.swx.adbcontrol.components.NewTextInputLayout
+    <com.swx.adbremote.components.NewTextInputLayout
         android:id="@+id/input_layout_et_start_path"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
             android:textColor="@color/text_color"
             android:textColorHint="@color/line_color"
             android:textSize="14sp" />
-    </com.swx.adbcontrol.components.NewTextInputLayout>
+    </com.swx.adbremote.components.NewTextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

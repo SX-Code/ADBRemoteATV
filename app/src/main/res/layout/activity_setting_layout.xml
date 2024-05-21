@@ -19,7 +19,7 @@
         app:contentInsetStart="0dp">
 
         <ImageButton
-            android:id="@+id/btn_setting_back"
+            android:id="@+id/btn_setting_layout_back"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@drawable/background_btn_back_arrow"

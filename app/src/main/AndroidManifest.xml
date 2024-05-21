@@ -21,18 +21,21 @@
         tool:ignore="LockedOrientationActivity">
         <activity
             android:name=".activity.settings.SettingOnlineAppsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
             android:exported="false" />
         <activity
             android:name=".activity.settings.SettingLayoutActivity"
             android:exported="false" />
         <activity
             android:name=".activity.settings.SettingApplicationsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
             android:exported="false" />
         <activity
             android:name=".activity.settings.SettingBehaviorActivity"
             android:exported="false" />
         <activity
             android:name=".activity.ConnectInstanceActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

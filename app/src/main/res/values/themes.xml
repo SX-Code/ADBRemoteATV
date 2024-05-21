@@ -48,5 +48,15 @@
         <item name="android:textColor">@color/error_color</item>
     </style>
 
+    <style name="TransparentBottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item><!--显示软件盘-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
 
+    <!--带输入框-->
+    <style name="inputDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item><!--显示软件盘-->
+    </style>
 </resources>

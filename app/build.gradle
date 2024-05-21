@@ -6,7 +6,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.swx.adbcontrol"
+        applicationId "com.swx.adbremote"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -30,7 +30,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    namespace 'com.swx.adbcontrol'
+    namespace 'com.swx.adbremote'
 }
 
 dependencies {
@@ -42,8 +42,8 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    // 作者项目github: https://github.com/cgutman/AdbLib
-    implementation 'com.tananaev:adblib:1.3'
+    // 作者项目github: https://github.com/cgutman/AdbLib，中文字符长度问题，暂不使用该方式
+    // implementation 'com.tananaev:adblib:1.3'
     implementation 'javax.xml.bind:jaxb-api:2.3.1'
     // Android 圆形遥控器按钮盘 带中间按钮 https://github.com/D10NGYANG/DL10RoundMenuView
     implementation 'com.github.D10NGYANG:DL10RoundMenuView:1.0.9'
