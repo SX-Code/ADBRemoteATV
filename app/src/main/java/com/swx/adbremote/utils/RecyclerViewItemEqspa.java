@@ -94,7 +94,7 @@ public class RecyclerViewItemEqspa {
             // 最左边的那一列
             outRect.left = 0;
             outRect.right = unit * 2;
-        } else if (itemPosition - (spanCount - 1) % spanCount == 0) {
+        } else if ((itemPosition + 1) % spanCount == 0) {
             // 最右边的那一列
             outRect.left = unit * 2;
             outRect.right = 0;
