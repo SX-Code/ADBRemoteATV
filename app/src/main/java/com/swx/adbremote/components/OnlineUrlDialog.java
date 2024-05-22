@@ -14,12 +14,15 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.swx.adbremote.R;
+import com.swx.adbremote.utils.Constant;
+import com.swx.adbremote.utils.SharedData;
 import com.swx.adbremote.utils.ValidationUtil;
 
 /**
@@ -34,6 +37,7 @@ public class OnlineUrlDialog extends Dialog {
     private TextInputLayout onlineUrlInputLayout;
     private String url;
     private OnlineUrlDialog.OnButtonClickListener listener;
+    private RadioGroup mRadioGroup;
 
     public OnlineUrlDialog(@NonNull Context context) {
         this(context, R.style.inputDialog);
@@ -79,6 +83,13 @@ public class OnlineUrlDialog extends Dialog {
         positiveBtn = findViewById(R.id.btn_url_positive);
         mEditTextUrl = findViewById(R.id.et_online_config_path);
         onlineUrlInputLayout = findViewById(R.id.input_layout_online_url);
+        mRadioGroup = findViewById(R.id.rg_rep_url);
+        // 设置Group默认选中
+        if (Constant.URL_APPS_ZH.equals(url)) {
+            mRadioGroup.check(R.id.rb_rep_gitee);
+        } else if (Constant.URL_APPS_EN.equals(url)) {
+            mRadioGroup.check(R.id.rb_rep_github);
+        }
     }
 
     private void initEvent() {
@@ -89,6 +100,14 @@ public class OnlineUrlDialog extends Dialog {
         });
         negativeBtn.setOnClickListener(view -> {
             listener.onNegativeClick(view);
+        });
+        mRadioGroup = findViewById(R.id.rg_rep_url);
+        mRadioGroup.setOnCheckedChangeListener((radioGroup, id) -> {
+            if (id == R.id.rb_rep_github) {
+                mEditTextUrl.setText(Constant.URL_APPS_EN);
+            } else if (id == R.id.rb_rep_gitee) {
+                mEditTextUrl.setText(Constant.URL_APPS_ZH);
+            }
         });
     }
 

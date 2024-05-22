@@ -8,6 +8,7 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -76,6 +77,10 @@ public class SettingOnlineAppsActivity extends AppCompatActivity implements View
             public void handleMessage(@NonNull Message msg) {
                 super.handleMessage(msg);
                 String json = (String) msg.obj;
+                if (TextUtils.isEmpty(json)) {
+                    ToastUtil.showShort("没获取到");
+                    return;
+                }
                 ArrayList<AppItem> apps = BeanUtil.getAppsByJsonArray(json);
                 mAppsAdapter.setData(apps);
                 if (msg.what == WHAT_PARSE) {

@@ -13,8 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/text_config_url"
+        android:layout_marginBottom="16dp"
         android:textColor="@color/text_color"
         android:textSize="16sp" />
+
 
     <com.swx.adbremote.components.NewTextInputLayout
         android:id="@+id/input_layout_online_url"
@@ -41,6 +43,32 @@
             tools:ignore="ContentDescription" />
     </com.swx.adbremote.components.NewTextInputLayout>
 
+    <RadioGroup
+        android:id="@+id/rg_rep_url"
+        android:layout_width="match_parent"
+        android:theme="@style/MyRadioButton"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_rep_github"
+            android:text="@string/text_rep_github"
+            android:layout_width="wrap_content"
+            android:textColor="@color/text_color"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/rb_rep_gitee"
+            android:text="@string/text_rep_gitee"
+            android:layout_width="wrap_content"
+            android:textColor="@color/text_color"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
 
     <LinearLayout
         android:layout_width="match_parent"

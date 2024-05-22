@@ -25,7 +25,7 @@ public class HttpUtil {
         try {
             URL url = new URL(url_path);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setConnectTimeout(3000);
+            connection.setConnectTimeout(5000);
             connection.setRequestMethod("GET");//请求方法
             connection.setDoInput(true);//输入流
             int code = connection.getResponseCode();

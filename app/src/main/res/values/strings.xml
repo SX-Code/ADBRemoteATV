@@ -97,4 +97,7 @@
     <string name="text_download">下载</string>
     <string name="text_input_chinese_unless">无法输入中文?</string>
     <string name="text_backspace">退格</string>
+    <string name="text_custom">自定义</string>
+    <string name="text_rep_github">官方Github仓库</string>
+    <string name="text_rep_gitee">官方Gitee仓库</string>
 </resources>

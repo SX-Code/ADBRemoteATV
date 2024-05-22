@@ -12,6 +12,7 @@ public class Constant {
     public static final String KEY_SETTING_BEHAVIOR_HAPTIC_FEEDBACK = "key_setting_behavior_haptic_feedback";
     public static final String KEY_QUICK_ACCESS_ORDER_CHANGE = "key_quick_access_order_change";
     public static final String KEY_QUICK_ACCESS_APP_ONLINE_URL = "key_quick_access_app_online_url";
+    public static final String KEY_DEFAULT_QUICK_ACCESS_APP_ONLINE_URL = "key_default_quick_access_app_online_url";
     public static final String KEY_INPUT_LANGUAGE = "key_input_language";
     public static final String VALE_ADB_KEYBOARD_URL = "com.android.adbkeyboard/.AdbIME";
     public static final String VALUE_ACTIVITY_APP_PRIORITY = "value_activity_app_priority";
@@ -23,7 +24,9 @@ public class Constant {
     public static final String FILE_SUFFIX_DOWNLOAD_GET = "update.json"; // 下载信息文件名
     public static String URL_DOWNLOAD_GET = URL_PREFIX_ZH + FILE_SUFFIX_DOWNLOAD_GET; // 获取下载地址
     public static final String FILE_SUFFIX_APPS = "apps.json"; // APPS仓库文件名
-    public static String DEFAULT_QUICK_ACCESS_APP_ONLINE_URL = URL_PREFIX_ZH + FILE_SUFFIX_APPS; // APPS仓库地址
+    public static final String URL_APPS_ZH = URL_PREFIX_ZH + FILE_SUFFIX_APPS; // 中文APPS仓库
+    public static final String URL_APPS_EN = URL_PREFIX_EN + FILE_SUFFIX_APPS; // 中文APPS仓库
+    public static String DEFAULT_QUICK_ACCESS_APP_ONLINE_URL = URL_APPS_ZH; // APPS仓库地址
     public static final String SAVE_FILE_NAME = "ADB_Remote_ATV_%s.apk";
     public static final String URL_GITHUB_CODE_PAGE = "https://github.com/SX-Code/ADBRemoteATV"; // Github页面
     public static final String URL_GITHUB_FEEDBACK_PAGE = "https://github.com/SX-Code/ADBRemoteATV/discussions"; // Github讨论页面
@@ -33,7 +36,7 @@ public class Constant {
         String language = locale.getLanguage();
         if (!language.equals("zh")) {
             // 使用Github
-            DEFAULT_QUICK_ACCESS_APP_ONLINE_URL = URL_PREFIX_ZH + FILE_SUFFIX_APPS;
+            DEFAULT_QUICK_ACCESS_APP_ONLINE_URL = URL_APPS_EN;
             URL_DOWNLOAD_GET = URL_PREFIX_EN + FILE_SUFFIX_DOWNLOAD_GET;
         }
     }
