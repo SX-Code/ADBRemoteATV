@@ -150,13 +150,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mRvQuickAccess.setAdapter(mQuickAccessAppsAdapter);
         switchKeyboardCallback = (result, msg) -> {
             if (!result) {
-                ToastUtil.showToastThread("连接失败");
+                ToastUtil.showToastThread(MainActivity.this.getString(R.string.text_connection_failed));
                 return;
             }
             if (msg.contains("cannot be selected for")) {
-                ToastUtil.showToastThread("切换失败");
+                ToastUtil.showToastThread(MainActivity.this.getString(R.string.text_switch_failed));
             } else {
-                ToastUtil.showToastThread("切换成功");
+                ToastUtil.showToastThread(MainActivity.this.getString(R.string.text_switch_successful));
             }
         };
         handler = new Handler(Looper.getMainLooper()) {
@@ -381,7 +381,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         // 尝试获取默认的输入法，方便后续还原
                         ADBConnectUtil.getDefaultKeyboard((result, msg) -> {
                             if (!result) {
-                                ToastUtil.showToastThread("连接失败");
+                                ToastUtil.showToastThread(MainActivity.this.getString(R.string.text_connection_failed));
                             } else {
                                 // 获取成功，尝试切换到ADBKeyboard
                                 String currentKeyboard = msg.replace("\n", "");

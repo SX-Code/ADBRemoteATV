@@ -3,6 +3,9 @@ package com.swx.adbremote.utils;
 import android.util.Log;
 import android.view.KeyEvent;
 
+import com.swx.adbremote.MainActivity;
+import com.swx.adbremote.MainApplication;
+import com.swx.adbremote.R;
 import com.swx.adbremote.entity.ConnectInstance;
 import com.swx.adbremote.adblib.AdbConnection;
 import com.swx.adbremote.adblib.AdbCrypto;
@@ -38,7 +41,7 @@ public class ADBConnectUtil {
 
     public static ADBConnectUtil.ShellExecCallable callable = (result, msg) -> {
         if (!result) {
-            ToastUtil.showToastThread("连接失败");
+            ToastUtil.showToastThread(MainApplication.getContext().getString(R.string.text_connection_failed));
         }
     };
 

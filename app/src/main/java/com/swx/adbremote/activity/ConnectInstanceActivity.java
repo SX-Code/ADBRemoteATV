@@ -20,6 +20,7 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.swx.adbremote.MainApplication;
 import com.swx.adbremote.R;
 import com.swx.adbremote.adapter.ConnectInstanceAdapter;
 import com.swx.adbremote.components.ConnectOperateDialog;
@@ -297,9 +298,9 @@ public class ConnectInstanceActivity extends AppCompatActivity implements View.O
             if (res) {
                 // 获取连接成功，返回页面
                 finish();
-                ToastUtil.showToastThread("连接成功");
+                ToastUtil.showToastThread(MainApplication.getContext().getString(R.string.text_connection_successful));
             } else {
-                ToastUtil.showToastThread("连接失败");
+                ToastUtil.showToastThread(MainApplication.getContext().getString(R.string.text_connection_failed));
                 hasOneConnecting = false; // 重置状态
                 // 发送消息更新RecyclerView
                 Message message = new Message();

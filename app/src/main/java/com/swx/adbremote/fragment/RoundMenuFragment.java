@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.dlong.rep.dlroundmenuview.DLRoundMenuView;
+import com.swx.adbremote.MainApplication;
 import com.swx.adbremote.R;
 import com.swx.adbremote.utils.ADBConnectUtil;
 import com.swx.adbremote.utils.Constant;
@@ -57,7 +58,7 @@ public class RoundMenuFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_round_menu, container, false);
         ADBConnectUtil.ShellExecCallable callable = (result, msg) -> {
             if (!result) {
-                ToastUtil.showToastThread("连接失败");
+                ToastUtil.showToastThread(MainApplication.getContext().getString(R.string.text_connection_failed));
             }
         };
         // 获取调度服务

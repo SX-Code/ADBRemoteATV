@@ -44,11 +44,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        android:text="@string/text_mgr_applications"
+        android:text="@string/text_manage_app"
         android:textColor="@color/text_color_gray"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar_setting_applications" />
 
@@ -82,7 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/background_btn_add_app"
-            android:text="@string/text_add_app"
+            android:text="@string/text_add_apps"
             android:layout_marginEnd="10dp"
             android:textColor="@color/text_color"
             android:textSize="18sp"

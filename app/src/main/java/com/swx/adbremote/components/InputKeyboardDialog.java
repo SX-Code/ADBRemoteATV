@@ -87,8 +87,8 @@ public class InputKeyboardDialog extends BottomSheetDialog {
 
         root.findViewById(R.id.tv_input_chinese_unless).setOnClickListener(view -> listener.onErrorClick());
         mToggleButton = root.findViewById(R.id.tb_switch_language);
-        mToggleButton.setTextOff(getToggleButtonFont("英/中"));
-        mToggleButton.setTextOn(getToggleButtonFont("中/英"));
+        mToggleButton.setTextOff(getToggleButtonFont(getContext().getString(R.string.text_en_zh)));
+        mToggleButton.setTextOn(getToggleButtonFont(getContext().getString(R.string.text_zh_en)));
         mToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {

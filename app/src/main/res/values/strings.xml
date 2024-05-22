@@ -29,6 +29,8 @@
     <string name="text_next_video">下一集</string>
     <string name="text_close_tv">关机</string>
     <string name="text_select_connect">选择连接</string>
+    <string name="text_connection_failed">连接失败</string>
+    <string name="text_connection_successful">连接成功</string>
     <string name="text_add">添加</string>
     <string name="ic_delete">删除</string>
     <string name="ic_edit">编辑</string>
@@ -64,8 +66,6 @@
     <string name="text_behavior">按键行为</string>
     <string name="text_haptic_feedback">震动反馈</string>
     <string name="text_desc_haptic_feedback">按下遥控器按钮时的轻微震动反馈</string>
-    <string name="text_mgr_applications">管理应用程序</string>
-    <string name="text_add_app">添加应用</string>
     <string name="text_remove">删除</string>
     <string name="text_edit">编辑</string>
     <string name="text_drag">拖拽</string>
@@ -100,4 +100,8 @@
     <string name="text_custom">自定义</string>
     <string name="text_rep_github">官方Github仓库</string>
     <string name="text_rep_gitee">官方Gitee仓库</string>
+    <string name="text_switch_failed">切换失败</string>
+    <string name="text_switch_successful">切换成功</string>
+    <string name="text_en_zh">英/中</string>
+    <string name="text_zh_en">中/英</string>
 </resources>
