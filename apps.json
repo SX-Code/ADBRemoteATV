@@ -14,10 +14,39 @@
         "icon": "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/icons/bbll.png",
         "url": "com.xx.blbl/com.xx.blbl.ui.MainActivity"
     },
-    
     {
         "name": "ACAC",
         "icon": "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/icons/acac.png",
         "url": "com.xx.afaf/com.xx.afaf.MainActivity"
+    },
+    {
+        "name": "My TV",
+        "icon": "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/icons/mytv.png",
+        "url": "com.lizongying.mytv/com.lizongying.mytv.MainActivity"
+    },
+    {
+        "name": "哔嘀影视",
+        "icon": "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/icons/bdys.png",
+        "url": "cc.bde4.bdplayer/cc.bde4.bdplayer.SplashActivity"
+    },
+    {
+        "name": "云视听小电视",
+        "icon": "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/icons/bilibili.png",
+        "url": "com.xiaodianshi.tv.yst/com.xiaodianshi.tv.yst.ui.main.MainActivity"
+    },
+    {
+        "name": "BrowseHere",
+        "icon": "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/icons/browserhere.png",
+        "url": "com.tcl.browser/com.tcl.browser.portal.home.activity.HomePageActivity"
+    },
+    {
+        "name": "Clash for Android",
+        "icon": "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/icons/clash.png",
+        "url": "com.github.kr328.clash/com.github.kr328.clash.MainActivity"
+    },
+    {
+        "name": "当贝市场",
+        "icon": "https://raw.githubusercontent.com/SX-Code/ADBRemoteATV/main/icons/dangbei.png",
+        "url": "com.dangbeimarket/com.dangbeimarket.activity.WelcomeActivity"
     }
 ]
