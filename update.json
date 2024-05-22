@@ -1,4 +1,4 @@
 {
-  "info": "现已支持软件在线更新。\n借助手机软键盘将字符输入到 Android TV 中，现已支持中/英字符。注意中文字符需要ADBKeyboard支持。",
-  "url": "https://github.com/SX-Code/ADBRemoteATV/releases/download/v1.0.0/ADB_Remote_ATV_20240521052334.apk"
+  "info": "修复软件仓库布局错误。\n增加英文支持。",
+  "url": "https://github.com/SX-Code/ADBRemoteATV/releases/download/v1.0.0/ADB_Remote_ATV_20240522143306.apk"
 }
