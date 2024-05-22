@@ -440,8 +440,8 @@ public class ConnectInstanceActivity extends AppCompatActivity implements View.O
     private void showRemoveQuestionDialog() {
         if (questionDialog == null) {
             questionDialog = QuestionDialog.build(this,
-                    "删除连接",
-                    "你确定要删除选中的连接?"
+                    this.getString(R.string.text_remove_connect),
+                    this.getString(R.string.text_remove_connect_info)
             );
             questionDialog.setOnButtonClickListener(new QuestionDialog.OnButtonClickListener() {
                 @Override

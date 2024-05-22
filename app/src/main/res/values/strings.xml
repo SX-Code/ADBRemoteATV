@@ -104,4 +104,12 @@
     <string name="text_switch_successful">切换成功</string>
     <string name="text_en_zh">英/中</string>
     <string name="text_zh_en">中/英</string>
+    <string name="text_empty">没获取到</string>
+    <string name="text_update_failed">更新失败</string>
+    <string name="text_prompt_message">提示信息</string>
+    <string name="text_permission_msg">当前应用缺少必要权限，该功能暂时无法使用。如若需要，请单击【确定】按钮前往设置中心进行权限授权。</string>
+    <string name="text_remove_app">移除应用程序</string>
+    <string name="text_remove_app_info">确定要删除此应用程序?</string>
+    <string name="text_remove_connect">删除连接</string>
+    <string name="text_remove_connect_info">你确定要删除选中的连接?</string>
 </resources>

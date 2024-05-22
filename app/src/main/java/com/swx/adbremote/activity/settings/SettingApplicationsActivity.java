@@ -195,7 +195,7 @@ public class SettingApplicationsActivity extends AppCompatActivity implements Vi
 
     private void showQuestionDialog() {
         if (questionDialog == null) {
-            questionDialog = QuestionDialog.build(this, "移除应用程序", "确定要删除此应用程序?");
+            questionDialog = QuestionDialog.build(this, this.getString(R.string.text_remove_app), this.getString(R.string.text_remove_app_info));
             questionDialog.setOnButtonClickListener(new QuestionDialog.OnButtonClickListener() {
                 @Override
                 public void onPositiveClick(View view) {

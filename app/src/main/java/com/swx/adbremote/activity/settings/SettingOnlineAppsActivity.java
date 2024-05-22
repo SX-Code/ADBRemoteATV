@@ -78,7 +78,7 @@ public class SettingOnlineAppsActivity extends AppCompatActivity implements View
                 super.handleMessage(msg);
                 String json = (String) msg.obj;
                 if (TextUtils.isEmpty(json)) {
-                    ToastUtil.showShort("没获取到");
+                    ToastUtil.showShort(SettingOnlineAppsActivity.this.getString(R.string.text_empty));
                     return;
                 }
                 ArrayList<AppItem> apps = BeanUtil.getAppsByJsonArray(json);

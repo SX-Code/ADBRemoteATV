@@ -96,7 +96,7 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
                 manager.checkUpdate();
             });
         } catch (Exception e) {
-            ToastUtil.showShort("更新失败");
+            ToastUtil.showShort(SettingActivity.this.getString(R.string.text_update_failed));
         }
     }
 
@@ -125,8 +125,8 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
     private void permissionDialog() {
         if (permissionDialog == null) {
             permissionDialog = QuestionDialog.
-                    build(this, "提示信息",
-                            "当前应用缺少必要权限，该功能暂时无法使用。如若需要，请单击【确定】按钮前往设置中心进行权限授权。")
+                    build(this, this.getString(R.string.text_prompt_message),
+                            this.getString(R.string.text_permission_msg))
                     .setOnButtonClickListener(new QuestionDialog.OnButtonClickListener() {
                         @Override
                         public void onPositiveClick(View view) {

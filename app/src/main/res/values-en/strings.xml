@@ -104,4 +104,12 @@
     <string name="text_switch_successful">Switch successful</string>
     <string name="text_en_zh">En/Zh</string>
     <string name="text_zh_en">Zh/En</string>
+    <string name="text_empty">Empty</string>
+    <string name="text_update_failed">Update failed</string>
+    <string name="text_prompt_message">Prompt message</string>
+    <string name="text_permission_msg">The current application lacks necessary permissions and this feature is temporarily unavailable. If necessary, please click the [OK] button to go to the Settings Center to authorize permissions.</string>
+    <string name="text_remove_app">Remove App</string>
+    <string name="text_remove_app_info">Are you sure you want to remove this application?</string>
+    <string name="text_remove_connect">Remove connection</string>
+    <string name="text_remove_connect_info">Are you sure you want to remove the selected connection?</string>
 </resources>
